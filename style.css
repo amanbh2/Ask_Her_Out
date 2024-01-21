@@ -1,45 +1,113 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html{
-    font-size: 16px;
-    font-size: 400;
-    text-rendering: optimizeLegibility;
-    font-family: 'Poppins', sans-serif;
+html {
+  font-size: 16px;
+  font-size: 400;
+  text-rendering: optimizeLegibility;
+  font-family: "Poppins", sans-serif;
+}
+html a {
+  text-decoration: none;
+}
+body {
+  /* background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%); */
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(249,232,51,1) 0%, rgba(250,196,59,1) 100.2% );
+  height: 100vh;
+  color: white;
+}
 
-}
-html a{
-    text-decoration: none;
-}
-body{
-    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
-    height: 100vh;
-}
-h1{
-    font-size: 80px;
-    color: white;
-}
-#stage{
-    width: 500px;
-    height: 400px;
-    background-color: white;
-    margin: 10% auto;
+#stage {
+  width: 500px;
+  height: 400px;
+  background-color: white;
+  margin: 100px auto;
+  padding-top: 60px;
 
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid;
+  border-color: #333533;
+}
+
+#stage > h1 {
+  font-size: 100px;
+  color: #1db233;
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+#stage > p{
+  font-family: 'Great Vibes', cursive;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  /* color: rgba(0, 0, 0, 0.8); */
+  color: #fe5f55;
+}
+#btn_box {
+  display: grid;
+  grid-template-columns: auto 100px 200px 100px auto;
+}
+
+.btns {
+  height: 40px;
+  width: 100px;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333533;
+
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid;
+  border-color: #333533;;
+  
+}
+#btn_yes:hover{
+    background-color: rgb(41, 191, 18, 0.1);
+    color: rgb(41, 191, 18);
+    border-color: rgb(41, 191, 18);
+}
+
+#btn_no{
+    color: #333533;;
+    transition: all 1s ease;
+}
+
+#btn_no:hover{
+    background-color: rgb(217, 4, 41, 0.1);
+    color: rgb(217, 4, 41, 1);
+    border-color: rgb(217, 4, 41, 1);
+    transform: scale(0%, 0%);
+    cursor: default;
+}
+
+.btns:hover {
+  
 }
 
 @media only screen and (max-width: 600px) {
-    #stage {
-      width: 300px;
-      height: 250px;
-      margin: 20% auto;
-    }
+  #stage {
+    width: 300px;
+    height: 400px;
+    margin: 20% auto;
   }
+
+  #btn_box {
+    display: grid;
+    grid-template-columns: auto 100px 80px 100px auto;
+  }
+}
